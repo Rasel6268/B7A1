@@ -10,8 +10,6 @@ const filterEvenNumbers = (num: number[]): number[] => {
   return evenNumber;
 };
 
-// const result = filterEvenNumbers([1, 4, 6, 7, 8, 9, 10, 12, 13, 15]);
-
 //Problem2
 const reverseString =(str:string): String =>{
     let reverseStr: string = ''
@@ -20,4 +18,8 @@ const reverseString =(str:string): String =>{
     }
   return reverseStr
 }
-const result = reverseString('tpircsepyt')
+
+const checkType = (type: String |number) : string => {
+      return typeof type
+}
+
