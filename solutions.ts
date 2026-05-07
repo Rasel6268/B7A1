@@ -10,4 +10,14 @@ const filterEvenNumbers = (num: number[]): number[] => {
   return evenNumber;
 };
 
-const result = filterEvenNumbers([1, 4, 6, 7, 8, 9, 10, 12, 13, 15]);
+// const result = filterEvenNumbers([1, 4, 6, 7, 8, 9, 10, 12, 13, 15]);
+
+//Problem2
+const reverseString =(str:string): String =>{
+    let reverseStr: string = ''
+    for(let i = str.length - 1 ;i >= 0;i--){
+       reverseStr += str[i]
+    }
+  return reverseStr
+}
+const result = reverseString('tpircsepyt')
