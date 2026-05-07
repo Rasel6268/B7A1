@@ -36,10 +36,10 @@ interface Book {
 }
 
 interface readBook extends Book {
-    isRead: boolean
+  isRead: boolean;
 }
 
-const toggleReadStatus = (book: Book): readBook  => {
+const toggleReadStatus = (book: Book): readBook => {
   return {
     ...book,
     isRead: true,
@@ -47,29 +47,40 @@ const toggleReadStatus = (book: Book): readBook  => {
 };
 //problem6
 class Person {
-    name: string;
-    age: number;
+  name: string;
+  age: number;
 
-    constructor(name: string,age: number){
-        this.name = name;
-        this.age = age
-    };
-    stdInfo(): string {
-      return `Name: ${this.name},age: ${this.age}`
-    }
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+  stdInfo(): string {
+    return `Name: ${this.name},age: ${this.age}`;
+  }
 }
 class Student extends Person {
-     grade: string;
-    constructor(name: string,age:number,grade:string){
-    
-    super(name,age);
-    this.grade = grade
-    }
-    getDetails():string {
-        return `${this.stdInfo()},Grade: ${this.grade}`
-    }
+  grade: string;
+  constructor(name: string, age: number, grade: string) {
+    super(name, age);
+    this.grade = grade;
+  }
+  getDetails(): string {
+    return `${this.stdInfo()},Grade: ${this.grade}`;
+  }
 }
+//problem
 
+const getIntersection = (array1: number[], array2: number[]): number[] => {
+  let combainArr: number[] = [];
+  for (let i = 0; i < array1.length; i++) {
+    for (let j = 0; j < array2.length; j++) {
+      if (array1[i] === array2[j]) {
+        combainArr.push(array2[j]);
+      }
+    }
+  }
+  return combainArr;
+};
 
 // class Person {
 //   constructor(public name: string) {}
